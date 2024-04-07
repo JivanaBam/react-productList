@@ -8,7 +8,6 @@ const ProductData = () => {
       style={{
         gap: "1rem",
         display: "flex",
-        flexDirection: "row",
         flexWrap: "wrap",
         alignItems: "center",
         justifyContent: "center",
@@ -20,9 +19,9 @@ const ProductData = () => {
             key={item.id}
             style={{
               boxShadow: "rgba(0, 0, 0, 0.24) 0px 3px 8px",
-              width: "400px",
-              display: "flex",
-              gap: "1rem",
+              width: "300px",
+              // display: "flex",
+              // gap: "1rem",
               alignItems: "center",
             }}
           >
@@ -30,14 +29,14 @@ const ProductData = () => {
               src={item.image}
               alt=""
               style={{
-                width: "200px",
+                height: "150px",
+                width: "150px",
                 padding: "1rem",
               }}
             />
-            <div style={{ display: "flex", flexDirection: "column" }}>
-              <h4>{item.name}</h4>
-              <h4 style={{ color: "green" }}>Rs: {item.price}</h4>
-            </div>
+
+            <h4>{item.name}</h4>
+            <h4 style={{ color: "green" }}>Rs.{item.price}</h4>
           </div>
         );
       })}
